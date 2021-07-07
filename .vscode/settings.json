@@ -1,5 +1,6 @@
 {
   "ocaml.sandbox": {
+<<<<<<< HEAD
     "kind": "custom",
     "template": "$prog $args"
   },
@@ -7,4 +8,9 @@
   "files.associations": {
     "*.yaml": "home-assistant"
   }
+=======
+		"kind": "esy",
+		"root": "${workspaceFolder:ocaml-oidc}"
+	}
+>>>>>>> 6bb7aa565455 (add resolution for easy-ocaml to compile)
 }
