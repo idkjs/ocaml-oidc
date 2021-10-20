@@ -1,10 +1,6 @@
 {
   "ocaml.sandbox": {
-    "kind": "custom",
-    "template": "$prog $args"
-  },
-  "nixEnvSelector.nixShellConfig": "${workspaceRoot}/shell.nix",
-  "files.associations": {
-    "*.yaml": "home-assistant"
+    "kind": "esy",
+    "root": "${workspaceFolder:ocaml-oidc-demo}"
   }
 }
