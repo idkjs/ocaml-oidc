@@ -2,16 +2,17 @@
   "name": "oidc",
   "version": "0.0.0",
   "description": "My Project",
-  "esy": {
-    "build": "dune build --root=. --promote-install-file"
-  },
+  "esy": { "build": "dune build --root=. --promote-install-file" },
   "scripts": {
-    "start": "reenv -e .env -- redemon -p ./oidc -p ./oidc-client -p ./library -p ./executable dune exec executable/MorphOidcClient.exe",
+    "start":
+      "reenv -e .env -- redemon -p ./oidc -p ./oidc-client -p ./library -p ./executable dune exec executable/MorphOidcClient.exe",
     "test": "dune runtest --no-buffer",
-    "watch:test": "redemon -p ./oidc -p ./oidc-client -p ./test esy x RunTests.exe",
+    "watch:test":
+      "redemon -p ./oidc -p ./oidc-client -p ./test esy x RunTests.exe",
     "docs": "dune build @doc --root .",
     "fmt": "dune build @fmt --auto-promote --root .",
-    "docs-path": "esy echo #{self.target_dir / 'default' / '_doc' / '_html' / 'index.html'}"
+    "docs-path":
+      "esy echo #{self.target_dir / 'default' / '_doc' / '_html' / 'index.html'}"
   },
   "dependencies": {
     "@esy-ocaml/reason": "<4.0.0",
@@ -20,21 +21,22 @@
     "@opam/containers": "*",
     "@opam/dune": "^2.5.0",
     "@opam/fmt": "*",
-    "@opam/jose": "^0.5.1",
+    "@opam/jose": "^0.6.0",
     "@opam/logs": "*",
     "@opam/lwt": "^5.0.0",
+    "@opam/mirage-crypto": "*",
+    "@opam/mirage-crypto-pk": "*",
+    "@opam/mirage-crypto-rng": "*",
     "@opam/routes": "*",
-    "@opam/tyxml-jsx": "*",
     "@opam/tyxml": "*",
+    "@opam/tyxml-jsx": "*",
+    "@opam/tyxml-ppx": "4.5.0",
     "@opam/uri": "*",
     "@opam/uuidm": "*",
     "@opam/yojson": "*",
-    "@opam/mirage-crypto": "^0.8.1",
-    "@opam/mirage-crypto-rng": "^0.8.1",
-    "@opam/mirage-crypto-pk": "^0.8.1",
+    "@reason-native-web/esy-openssl": "^1.1.1006",
     "@reason-native-web/morph": "^0.6.1",
     "@reason-native-web/piaf": "^1.4.0",
-    "@reason-native-web/esy-openssl": "^1.1.1006",
     "ocaml": "^4.10.0"
   },
   "devDependencies": {
@@ -47,7 +49,10 @@
     "@opam/bisect_ppx": "^2.3.0"
   },
   "resolutions": {
-    "@opam/conf-pkg-config": "esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79",
-    "@opam/session": "inhabitedtype/ocaml-session:session.opam#6180413"
+    "@opam/conf-pkg-config":
+      "esy-ocaml/yarn-pkg-config#db3a0b63883606dd57c54a7158d560d6cba8cd79",
+    "@opam/session": "inhabitedtype/ocaml-session:session.opam#6180413",
+    "@esy-ocaml/reason":
+      "github:reasonml/reason#ccc34729994b4a80d4f6274cc0165cd9113444d6"
   }
 }
