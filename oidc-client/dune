@@ -5,8 +5,12 @@ let preprocess =
   | "yes" -> "(preprocess (pps bisect_ppx))"
   | _ -> ""
   | exception Not_found -> ""
-  
+
 let () = Jbuild_plugin.V1.send @@ {|
+(env
+ (dev
+  (flags
+   (:standard -w -53-16))))
 (library
  (name OidcClient)
  (public_name oidc-client)
@@ -16,4 +20,6 @@ let () = Jbuild_plugin.V1.send @@ {|
 (documentation
  (package oidc-client)
  (mld_files (:standard)))
+
 |}
+
