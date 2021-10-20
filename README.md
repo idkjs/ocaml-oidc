@@ -27,6 +27,7 @@ ocaml-oidc
 npm install -g esy redemon reenv
 git clone <this-repo>
 esy install
+esy @oidc-client install
 esy build
 ```
 
